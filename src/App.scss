@@ -1,12 +1,23 @@
+body {
+  background-color: lightgray;
+  background-image: url(../images/bg.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 h1 {
+
+    background-color: #eb766eea;
     text-align: center;
+    color: #fff;
   }
 #todo-list {
-  width: 500px;
+  max-width: 500px;
   margin: 60px auto;
 }
 form, .todo {
-  border: 1px solid grey;
+  border: 1px solid rgb(255, 255, 255);
   padding: 10px 20px;
   margin-bottom: 10px;
 }
@@ -15,6 +26,7 @@ form, .todo {
 }
 form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 30px;
   background-color: #2B649E;

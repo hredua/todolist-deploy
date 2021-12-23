@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+    app:
+        container_name: todolist-deploy-master
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - '.:/app'
+            - '/app/node_modules'
+        ports:
+            - '4000:4000'
+        environment:
+            - NODE_ENV=development
