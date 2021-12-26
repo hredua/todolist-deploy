@@ -1,35 +1,40 @@
+$color_button: #eb766eea;
+$principal_color: #fff;
+$button_hover: #b35750;
+$button_active: #802c26;
+$form_bg: #2B649E;
+$todo_bg: #3f81c2;
+
 body {
-  background-color: lightgray;
-  background-image: url(../images/bg.png);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-color: lightgray;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 h1 {
-
-    background-color: #eb766eea;
+    background-color: $color_button;
     text-align: center;
-    color: #fff;
+    color: $principal_color;
   }
 #todo-list {
   max-width: 500px;
   margin: 60px auto;
 }
 form, .todo {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid $principal_color;
   padding: 10px 20px;
   margin-bottom: 10px;
 }
 .todo {
-  background-color: #58A1EB;
+  background-color: $todo_bg;
 }
 form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 30px;
-  background-color: #2B649E;
+  background-color: $form_bg;
 }
 form input {
   padding: 4px 8px;
@@ -43,21 +48,21 @@ form input {
 
 button {
   font-size: 16px;
-  background-color: #EB766E;
-  color: #fff;
+  background-color: $color_button;
+  color: $principal_color;
   border-radius: 8px;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
-}
-button:hover {
-  background-color: #b35750;
-}
-button:active {
-  background-color: #802c26;
-}
-button:focus {
-  outline: 0;
+    &:hover {
+      background-color: $button_hover;
+    }
+    &:active {
+      background-color: $button_active;
+    }
+    &:focus {
+      outline: 0;
+    }
 }
 input[type='text'] { font-size: 20px; font-family: monospace; }
 .todo input[type="checkbox"] {
@@ -65,15 +70,17 @@ input[type='text'] { font-size: 20px; font-family: monospace; }
   margin: 0 16px 0 0;
   cursor: pointer;
 }
-.todo-text input {
-  padding: 4px;
-}
 .todo-text {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
+
+  input {
+    padding: 4px;
+  }
+  
 }
 .todo-completed {
   display: flex;
